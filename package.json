@@ -1,13 +1,9 @@
 {
   "name": "react-native-touchable-bounce",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React Native Touchable Bounce",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "license": "BSD-3-Clause",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:grabbou/react-native-touchable-bounce.git"
-  },
   "engines": {
     "node": ">=4"
   },
@@ -17,10 +13,21 @@
     "native",
     "touchable"
   ],
+  "scripts": {
+    "build": "babel --no-babelrc --presets=react-native --plugins=syntax-jsx,syntax-class-properties,syntax-object-rest-spread src --out-dir dist --ignore '**/__tests__/**'",
+    "prepublish": "npm run build"
+  },
   "devDependencies": {
-    "babel-eslint": "^5.0.0",
-    "eslint": "^2.2.0",
-    "eslint-plugin-react": "^4.1.0",
-    "react-native": "^0.21"
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-syntax-class-properties": "^6.13.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
+    "babel-preset-react-native": "^4.0.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-native": "^0.55.4"
   }
 }
