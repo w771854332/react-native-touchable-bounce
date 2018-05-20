@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "build": "babel --no-babelrc --presets=react-native --plugins=syntax-jsx,syntax-class-properties,syntax-object-rest-spread src --out-dir dist --ignore '**/__tests__/**'",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
