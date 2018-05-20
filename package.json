@@ -14,7 +14,7 @@
     "touchable"
   ],
   "scripts": {
-    "build": "babel --no-babelrc --presets=react-native --plugins=syntax-jsx,syntax-class-properties,syntax-object-rest-spread src --out-dir dist --ignore '**/__tests__/**'",
+    "build": "babel --no-babelrc --plugins=syntax-jsx,syntax-class-properties,syntax-object-rest-spread src --out-dir dist --ignore '**/__tests__/**'",
     "prepare": "npm run build"
   },
   "devDependencies": {
